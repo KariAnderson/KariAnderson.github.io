@@ -1,0 +1,249 @@
+:root {
+  --primary: #3F8FB4;
+  --primary-dark: #22779e;
+  --primary-darker: #021f2d;
+  --text-on-primary: #333;
+  --accent-text: #616161;
+  --titleFont: "Roboto", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
+  --borderColor: #ccc;
+  --half-spacing: 6px;
+  --spacing: 12px;
+  --double-spacing: 24px;
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-size: 18px;
+  max-width: 1200px;
+  width: 100%;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLES  */
+header {
+  display: flex;
+  gap: 16px;
+  padding: 24px 24px 12px 24px;
+  margin-bottom: 0;
+}
+
+.summary {
+  width: 850px;
+}
+
+.my-logo {
+  margin: auto;
+  padding: 6px;
+}
+
+.hexagon {
+  stroke: var(--primary);
+}
+
+.closed-tag {
+  fill: black;
+}
+
+.my-info {
+  flex-grow: 1;
+}
+
+.my-name {
+  font-family: var(--titleFont);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 52px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.my-job-title {
+  font-family: var(--titleFont);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: -15px 0 0 0;
+  padding: 0;
+  color: var(--text-on-primary);
+}
+
+/* CONTENT STYLES  */
+.content-wrapper {
+  display: flex;
+  gap: var(--double-spacing);
+}
+
+/* SUMMARY STYLES  */
+.summary {
+  margin-left: var(--spacing);
+}
+
+/* CONTACT STYLES  */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.contact-icon path {
+  fill: var(--primary-dark);
+}
+.contact-icon,
+.contact-text {
+  vertical-align: middle;
+  display: inline-block;
+  color: var(--accent-text);
+  margin-bottom: 4px;
+}
+
+.contact-text a {
+  text-decoration: none;
+  color: black;
+}
+.contact-text a:hover {
+  color: var(--primary);
+}
+
+.summary-header:not(:first-of-type),
+.work-experience-header:not(:first-of-type) {
+  padding: 20px var(--spacing) var(--half-spacing) 0;
+}
+
+.summary-header svg,
+.work-experience-header svg {
+  width: 30px;
+  height: 30px;
+  color: var(--primary);
+}
+
+.header-bottom {
+  width: 50px;
+  border-bottom: 4px solid var(--primary);
+  margin-bottom: var(--spacing);
+}
+
+.summary-title,
+.work-experience-title {
+  font-family: var(--titleFont);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+ul.summary-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.summary-details li {
+  padding-bottom: var(--spacing);
+}
+
+.education-degree,
+.education-university {
+  display: block;
+}
+.company {
+  display: flex;
+  justify-content: space-between;
+}
+.company-name {
+  font-family: var(--titleFont);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 22px;
+  align-self: flex-end;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+.job {
+  padding-right: 16px;
+}
+.job-title {
+  display: flex;
+}
+.job-text {
+  font-weight: 700;
+  display: inline-block;
+}
+.job-right {
+  display: flex;
+}
+.job-icon {
+  width: 16px;
+  height: 16px;
+  margin: 4px 3px 0 3px;
+}
+.job-description {
+  margin-top: 0;
+  margin-left: 24px;
+  margin-right: 0;
+  margin-bottom: 28px;
+}
+.job-description:first-of-type {
+  margin-top: 4px;
+}
+.job-description:last-of-type {
+  margin-bottom: 0;
+}
+
+.job-date {
+  font-size: 16px;
+  color: var(--accent-text);
+}
+.job-location {
+  font-size: 12px;
+}
+.job:not(:first-child) {
+  margin-top: 30px;
+}
+.job-left {
+  width: 16px;
+  margin: 0 8px auto 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding-bottom: 12px;
+  }
+  .summary {
+    width: auto;
+  }
+  .content-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 24px;
+  }
+  .summary-header {
+    margin-top: 20px;
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .content-wrapper {
+    margin: 24px;
+  }
+  header {
+    padding-bottom: 0;
+  }
+  .job-description {
+    padding-bottom: 0;
+    margin-bottom: 8px;
+    line-height: 18px;
+  }
+  .summary-details {
+    margin-top: 12px;
+    line-height: 18px;
+  }
+}
